@@ -1,0 +1,18 @@
+﻿@model BookApplication.Models.Category
+
+<h2>@Model.Name Books</h2>
+
+@if (!Model.Books.Any())
+{
+    <p>No books found for this category.</p>
+}
+else
+{
+    <ul>
+        @foreach (var book in Model.Books)
+        {
+            <li>@book.Title</li>
+        }
+    </ul>
+}
+
